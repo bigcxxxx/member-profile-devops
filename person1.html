@@ -206,6 +206,104 @@
     padding-top: 8px;
   }
 
+  section.interests{
+    padding-top: 8px;
+  }
+
+  .interests-heading{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--gold-soft);
+    margin: 44px 0 22px;
+  }
+
+  .interest-block{
+    margin-bottom: 40px;
+  }
+
+  .interest-title{
+    font-family: 'Noto Serif Thai', serif;
+    font-weight: 600;
+    font-size: 21px;
+    color: var(--parchment);
+    margin: 0 0 16px;
+  }
+
+  .interest-table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .interest-table td{
+    border: none;
+    padding: 0 8px;
+    text-align: center;
+    vertical-align: top;
+  }
+
+  .interest-frame{
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border: 1px solid var(--gold);
+    padding: 5px;
+    margin: 0 0 12px;
+    transition: box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .interest-frame:hover{
+    box-shadow: 0 0 0 5px rgba(201,162,75,0.10);
+  }
+
+  .interest-frame-inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(160deg, var(--wine), var(--onyx));
+    border: 1px solid rgba(201,162,75,0.35);
+  }
+
+  .interest-frame-inner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .interest-frame-label{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold-soft);
+  }
+
+  .interest-name{
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--parchment-dim);
+    line-height: 1.4;
+  }
+
+  @media (max-width: 640px){
+    .interest-table{
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .interest-table tr{ display: inline-flex; }
+    .interest-table td{
+      display: inline-block;
+      width: 130px;
+      min-width: 130px;
+      white-space: normal;
+    }
+  }
+
   .detail-row{
     display: grid;
     grid-template-columns: 240px 1fr;
@@ -277,7 +375,7 @@
     <header class="hero">
       <div class="photo-frame">
         <div class="photo">
-          <img src="images/person1.png" alt="รูปถ่ายของอภิรักษ์ มุกดา">
+          <img src="person1.png" alt="รูปถ่ายของอภิรักษ์ มุกดา">
         </div>
       </div>
       <div>
@@ -293,6 +391,11 @@
       <div class="detail-row">
         <div class="detail-label">รหัสนักศึกษา</div>
         <div class="detail-value">67219010059</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">สาขา</div>
+        <div class="detail-value">IT3102</div>
       </div>
 
       <div class="detail-row">
@@ -325,6 +428,66 @@
         <div class="detail-value">31 มีนาคม 2552</div>
       </div>
 
+    </section>
+
+    <section class="interests">
+      <p class="interests-heading">Things I Like</p>
+
+      <div class="interest-block">
+        <p class="interest-title">หนัง/การ์ตูนที่ชอบ</p>
+        <table class="interest-table">
+          <tr>
+            <td>
+              <div class="interest-frame"><div class="interest-frame-inner"><img src="Anime/A1.png" alt="Bleach"></div></div>
+              <p class="interest-name">Bleach</p>
+            </td>
+            <td>
+              <div class="interest-frame"><div class="interest-frame-inner"><img src="Anime/A2.png" alt="Fate Series"></div></div>
+              <p class="interest-name">Fate Series</p>
+            </td>
+            <td>
+              <div class="interest-frame"><div class="interest-frame-inner"><img src="Anime/A3.png" alt="Tensei Shitara Slime Datta Ken"></div></div>
+              <p class="interest-name">Tensei Shitara Slime Datta Ken</p>
+            </td>
+            <td>
+              <div class="interest-frame"><div class="interest-frame-inner"><img src="Anime/A4.png" alt="Chainsmoker Cat"></div></div>
+              <p class="interest-name">Chainsmoker Cat</p>
+            </td>
+            <td>
+              <div class="interest-frame"><div class="interest-frame-inner"><img src="Anime/A5.png" alt="Violet Evergarden"></div></div>
+              <p class="interest-name">Violet Evergarden</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="interest-block">
+        <p class="interest-title">เพลงที่ชอบ</p>
+        <table class="interest-table">
+          <tr>
+            <td>
+              <div class="interest-frame"><div class="interest-frame-inner"><img src="song/S1.png" alt="สัญญาหน้าฝน"></div></div>
+              <p class="interest-name">สัญญาหน้าฝน</p>
+            </td>
+            <td>
+              <div class="interest-frame"><div class="interest-frame-inner"><img src="song/S2.png" alt="มหาลัย"></div></div>
+              <p class="interest-name">มหาลัย</p>
+            </td>
+            <td>
+              <div class="interest-frame"><div class="interest-frame-inner"><img src="song/S3.png" alt="นางงามตู้กระจก"></div></div>
+              <p class="interest-name">นางงามตู้กระจก</p>
+            </td>
+            <td>
+              <div class="interest-frame"><div class="interest-frame-inner"><img src="song/S4.png" alt="คนล่าฝัน"></div></div>
+              <p class="interest-name">คนล่าฝัน</p>
+            </td>
+            <td>
+              <div class="interest-frame"><div class="interest-frame-inner"><img src="song/S5.png" alt="วณิพก"></div></div>
+              <p class="interest-name">วณิพก</p>
+            </td>
+          </tr>
+        </table>
+      </div>
     </section>
 
     <footer>
