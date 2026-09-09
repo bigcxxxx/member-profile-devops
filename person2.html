@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลนักศึกษา - นายปิยะชาติ สุทิน</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Sarabun', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar Style */
+        nav {
+            background-color: #1e293b;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            flex-grow: 1;
+        }
+
+        /* Card Style */
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            color: #0f172a;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #64748b;
+            font-size: 1rem;
+        }
+
+        /* Profile Section */
+        .profile-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .profile-wrapper {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
+        .profile-img-container {
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border: 4px solid #fff;
+            outline: 2px solid #cbd5e1;
+        }
+
+        .info-grid {
+            flex-grow: 1;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #475569;
+        }
+
+        .info-value {
+            color: #0f172a;
+            font-weight: 500;
+        }
+
+        .status-tag {
+            background-color: #dcfce7;
+            color: #166534;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            background-color: #1e293b;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="index.html">หน้าแรก (Index)</a></li>
+            <li><a href="person1.html">นักศึกษาคนที่ 1</a></li>
+            <li><a href="person2.html" class="active">นักศึกษาคนที่ 2</a></li>
+            <li><a href="person3.html">นักศึกษาคนที่ 3</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>ข้อมูลนักศึกษา</h1>
+                <p>สาขาวิชาเทคโนโลยีสารสนเทศ</p>
+            </div>
+
+            <div class="profile-wrapper">
+                <!-- Image -->
+                <div class="profile-img-container">
+                    <img src="67219010043.jpg" alt="นายปิยะชาติ สุทิน" class="profile-img">
+                </div>
+
+                <!-- Information List -->
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">รหัสนักศึกษา:</span>
+                        <span class="info-value">67219010043</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">ชื่อ - นามสกุล:</span>
+                        <span class="info-value">นายปิยะชาติ สุทิน</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">ชื่อเล่น:</span>
+                        <span class="info-value">แฮรี่</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">กรุ๊ปเลือด:</span>
+                        <span class="info-value">โอ</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">วันเกิด:</span>
+                        <span class="info-value">23 ตุลาคม 2551</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">เลขบัตรประชาชน:</span>
+                        <span class="info-value">1509966678429</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">โรงเรียนเดิม:</span>
+                        <span class="info-value">โรงเรียนสืบนทีธรรม</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">ห้องเรียน:</span>
+                        <span class="info-value">IT.3102</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">สาขาวิชา:</span>
+                        <span class="info-value">เทคโนโลยีสารสนเทศ</span>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-label">สถานะนักศึกษา:</span>
+                        <span class="info-value status-tag">ปกติ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; ระบบจัดการข้อมูลนักศึกษา สาขาวิชาเทคโนโลยีสารสนเทศ</p>
+    </footer>
+
+</body>
+</html>
