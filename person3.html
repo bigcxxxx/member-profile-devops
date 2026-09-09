@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลประวัตินักศึกษา - นายเมธัส แม่ปุน</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Sarabun', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f0f4f8;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background: linear-gradient(135deg, #1b365d, #2a5298);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        nav {
+            background-color: #ffffff;
+            padding: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        nav a {
+            text-decoration: none;
+            color: #1b365d;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid #dcdfe6;
+        }
+        nav a:hover, nav a.active {
+            background-color: #1b365d;
+            color: white;
+            border-color: #1b365d;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            padding: 30px;
+        }
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #eef2f6;
+            padding-bottom: 20px;
+        }
+        .profile-img {
+            width: 160px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 4px solid #1b365d;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            margin-bottom: 15px;
+            background-color: #e2e8f0;
+        }
+        .profile-header h2 {
+            color: #1b365d;
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+        }
+        .profile-header p {
+            color: #64748b;
+            font-size: 1.05rem;
+        }
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .info-table tr {
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .info-table tr:last-child {
+            border-bottom: none;
+        }
+        .info-table th, .info-table td {
+            padding: 12px 16px;
+            text-align: left;
+            font-size: 1rem;
+        }
+        .info-table th {
+            width: 35%;
+            color: #475569;
+            background-color: #f8fafc;
+            font-weight: 600;
+        }
+        .info-table td {
+            color: #1e293b;
+        }
+        .status-badge {
+            background-color: #dcfce7;
+            color: #166534;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 15px;
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ระบบประวัตินักศึกษา</h1>
+    </header>
+
+    <!-- ลิงก์เชื่อมโยงไปยังหน้าต่างๆ -->
+    <nav>
+        <a href="index.html">หน้าแรก (Index)</a>
+        <a href="person1.html" class="active">นักศึกษาคนที่ 1 (เมธัส)</a>
+        <a href="person2.html">นักศึกษาคนที่ 2</a>
+    </nav>
+
+    <main class="container">
+        <div class="profile-header">
+            <img src="https://www.lannapoly.ac.th/online/Stu_picture/67219010070.jpg" alt="รูปถ่าย นายเมธัส แม่ปุน" class="profile-img">
+            <h2>นายเมธัส แม่ปุน (ยาซีน)</h2>
+            <p>สาขาวิชา เทคโนโลยีสารสนเทศ | ห้อง IT.3102</p>
+        </div>
+
+        <table class="info-table">
+            <tr>
+                <th>รหัสนักศึกษา</th>
+                <td>67219010070</td>
+            </tr>
+            <tr>
+                <th>ชื่อ - นามสกุล</th>
+                <td>นายเมธัส แม่ปุน</td>
+            </tr>
+            <tr>
+                <th>ชื่อเล่น</th>
+                <td>ยาซีน</td>
+            </tr>
+            <tr>
+                <th>วันเกิด</th>
+                <td>25 กุมภาพันธ์ 2552</td>
+            </tr>
+            <tr>
+                <th>กรุ๊ปเลือด</th>
+                <td>บี (B)</td>
+            </tr>
+            <tr>
+                <th>เลขบัตรประชาชน</th>
+                <td>1509966699949</td>
+            </tr>
+            <tr>
+                <th>โรงเรียนเดิม</th>
+                <td>โรงเรียนยุพราชวิทยาลัย</td>
+            </tr>
+            <tr>
+                <th>ห้องเรียน</th>
+                <td>IT.3102</td>
+            </tr>
+            <tr>
+                <th>สาขาวิชา</th>
+                <td>เทคโนโลยีสารสนเทศ</td>
+            </tr>
+            <tr>
+                <th>สถานะนักศึกษา</th>
+                <td><span class="status-badge">ปกติ</span></td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        &copy; แผนกเทคโนโลยีสารสนเทศ - ข้อมูลนักศึกษา
+    </footer>
+
+</body>
+</html>
