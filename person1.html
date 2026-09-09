@@ -21,6 +21,15 @@
 
   *{ box-sizing: border-box; }
 
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  @keyframes riseIn{
+    from{ opacity: 0; transform: translateY(14px); }
+    to{ opacity: 1; transform: translateY(0); }
+  }
+
   html, body{
     margin:0;
     padding:0;
@@ -35,6 +44,7 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 0 28px 110px;
+    animation: riseIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
   .topbar{
@@ -52,9 +62,14 @@
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 17px;
+    transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .back-link a:hover{ color: var(--parchment); }
+  .back-link a:focus-visible{
+    outline: 1.5px solid var(--gold-soft);
+    outline-offset: 4px;
+  }
 
   .tabs{
     display: flex;
@@ -70,12 +85,21 @@
     border: 1px solid var(--gold);
     color: var(--gold-soft);
     background: transparent;
-    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .tab:hover{
     border-color: var(--gold-soft);
     color: var(--parchment);
+    transform: translateY(-1px);
+  }
+
+  .tab:focus-visible{
+    outline: 1.5px solid var(--gold-soft);
+    outline-offset: 3px;
   }
 
   .tab.active{
@@ -83,6 +107,7 @@
     border-color: var(--gold);
     color: var(--onyx-deep);
     font-weight: 600;
+    box-shadow: 0 2px 14px rgba(201,162,75,0.35);
   }
 
   @media (max-width: 640px){
@@ -104,6 +129,11 @@
     padding: 10px;
     border: 1px solid var(--gold);
     position: relative;
+    transition: box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .photo-frame:hover{
+    box-shadow: 0 0 0 6px rgba(201,162,75,0.10);
   }
 
   .photo-frame::before{
@@ -127,6 +157,12 @@
     object-fit: cover;
     display: block;
     filter: saturate(0.92) contrast(1.03);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+  }
+
+  .photo-frame:hover img{
+    transform: scale(1.045);
+    filter: saturate(1) contrast(1.05);
   }
 
   .kicker{
@@ -174,8 +210,14 @@
     display: grid;
     grid-template-columns: 240px 1fr;
     gap: 24px;
-    padding: 28px 0;
+    padding: 28px 12px;
+    margin: 0 -12px;
     border-bottom: 1px solid var(--line);
+    transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .detail-row:hover{
+    background: rgba(201,162,75,0.06);
   }
 
   .detail-label{
