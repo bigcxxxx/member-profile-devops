@@ -224,6 +224,109 @@
             letter-spacing: 0.5px;
         }
 
+        /* Section Title Style */
+        .section-title {
+            margin-top: 3rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-title h2 {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .section-title .line {
+            height: 1px;
+            width: 100%;
+            background: linear-gradient(90deg, var(--border-gold), transparent);
+        }
+
+        /* Luxury Table Style */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid var(--border-gold);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            background: rgba(20, 20, 25, 0.6);
+        }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .custom-table th {
+            background: linear-gradient(180deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+            color: var(--gold-light);
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 1rem 1.2rem;
+            border-bottom: 1px solid var(--border-gold);
+            letter-spacing: 0.5px;
+        }
+
+        .custom-table td {
+            padding: 1rem 1.2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            color: var(--text-main);
+            font-size: 0.95rem;
+            vertical-align: middle;
+        }
+
+        .custom-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .custom-table tr:hover td {
+            background: rgba(212, 175, 55, 0.03);
+        }
+
+        .category-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--gold-primary);
+        }
+
+        .item-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .item-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .item-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold-light);
+            border: 1px solid var(--border-gold);
+            border-radius: 50%;
+            font-size: 0.75rem;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -319,6 +422,52 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Preferences Section -->
+            <div class="section-title">
+                <h2>ความชอบส่วนตัว</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="table-container">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 35%;">หมวดหมู่</th>
+                            <th style="width: 65%;">รายการที่ชอบ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="category-badge">
+                                    <span>🎮</span> เกมที่ชอบ
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="item-list">
+                                    <li><span class="item-number">1</span> Five Nights at Freddy's</li>
+                                    <li><span class="item-number">2</span> Roblox</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="category-badge">
+                                    <span>🎵</span> เพลงที่ชอบ
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="item-list">
+                                    <li><span class="item-number">1</span> คู่ชีวิต</li>
+                                    <li><span class="item-number">2</span> It’s Been So Long</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </div>
 
