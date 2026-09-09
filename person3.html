@@ -3,200 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หน้าแรก - ระบบข้อมูลประวัตินักศึกษา</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Prompt', sans-serif;
-        }
-        body {
-            background-color: #0d0d0f;
-            color: #e5e5e5;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background-image: radial-gradient(circle at 50% 0%, #241d12 0%, #0d0d0f 75%);
-        }
-        header {
-            background: linear-gradient(180deg, #191611 0%, #0d0d0f 100%);
-            border-bottom: 2px solid #d4af37;
-            padding: 2.5rem 1rem;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-        }
-        header h1 {
-            background: linear-gradient(135deg, #fff3b3 0%, #d4af37 50%, #997300 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 2.2rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-        header p {
-            color: #d4af37;
-            margin-top: 8px;
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-        nav {
-            background-color: #141417;
-            padding: 14px 10px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-        }
-        nav a {
-            text-decoration: none;
-            color: #d4af37;
-            font-weight: 500;
-            padding: 8px 22px;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            border: 1px solid #d4af37;
-            background: rgba(212, 175, 55, 0.05);
-            font-size: 0.95rem;
-        }
-        nav a:hover, nav a.active {
-            background: linear-gradient(135deg, #d4af37 0%, #aa820a 100%);
-            color: #000000;
-            font-weight: 600;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.45);
-            border-color: #f3e5ab;
-        }
-        .container {
-            max-width: 840px;
-            margin: 45px auto;
-            background: #17171a;
-            border: 1px solid rgba(212, 175, 55, 0.35);
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.1);
-            padding: 45px 35px;
-            text-align: center;
-        }
-        .container h2 {
-            color: #f3e5ab;
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-        .container p {
-            color: #a3a19b;
-            font-size: 1.05rem;
-        }
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 25px;
-            margin-top: 35px;
-        }
-        .menu-card {
-            background: #1e1e24;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            border-radius: 14px;
-            padding: 30px 20px;
-            text-decoration: none;
-            color: #e5e5e5;
-            transition: all 0.35s ease;
-            display: block;
-            position: relative;
-            overflow: hidden;
-        }
-        .menu-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #d4af37, transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .menu-card:hover {
-            transform: translateY(-5px);
-            border-color: #d4af37;
-            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
-            background: #23222a;
-        }
-        .menu-card:hover::before {
-            opacity: 1;
-        }
-        .menu-card h3 {
-            margin-bottom: 10px;
-            color: #f3e5ab;
-            font-size: 1.3rem;
-        }
-        .menu-card p {
-            color: #e5e5e5;
-            font-size: 1.05rem;
-            margin-bottom: 8px;
-        }
-        .menu-card small {
-            color: #d4af37;
-            font-size: 0.88rem;
-        }
-        footer {
-            margin-top: auto;
-            text-align: center;
-            padding: 20px;
-            color: #787261;
-            font-size: 0.85rem;
-            border-top: 1px solid rgba(212, 175, 55, 0.15);
-            background-color: #0a0a0c;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>ระบบประวัตินักศึกษา</h1>
-        <p>สาขาวิชาเทคโนโลยีสารสนเทศ</p>
-    </header>
-
-    <nav>
-        <a href="index.html" class="active">หน้าแรก (Index)</a>
-        <a href="person1.html">นักศึกษาคนที่ 1 (เมธัส)</a>
-        <a href="person2.html">นักศึกษาคนที่ 2</a>
-    </nav>
-
-    <main class="container">
-        <h2>ยินดีต้อนรับสู่ระบบข้อมูลนักศึกษา</h2>
-        <p>กรุณาเลือกรายชื่อนักศึกษาที่ต้องการดูประวัติส่วนตัว</p>
-
-        <div class="menu-grid">
-            <a href="person1.html" class="menu-card">
-                <h3>นักศึกษาคนที่ 1</h3>
-                <p>นายเมธัส แม่ปุน</p>
-                <small>รหัส 67219010070</small>
-            </a>
-            <a href="person2.html" class="menu-card">
-                <h3>นักศึกษาคนที่ 2</h3>
-                <p>ข้อมูลนักศึกษาคนที่ 2</p>
-                <small>(คลิกเพื่อดูข้อมูล)</small>
-            </a>
-        </div>
-    </main>
-
-    <footer>
-        &copy; แผนกเทคโนโลยีสารสนเทศ - ข้อมูลนักศึกษา
-    </footer>
-
-</body>
-</html>
-```eof
-
-```html:person1.html
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ข้อมูลประวัตินักศึกษา - นายเมธัส แม่ปุน</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -334,7 +140,7 @@
         }
         .status-badge {
             background: linear-gradient(135deg, #d4af37, #997300);
-            color: #000;
+            color: #000000;
             padding: 4px 14px;
             border-radius: 20px;
             font-size: 0.9rem;
@@ -359,6 +165,7 @@
         <h1>ระบบประวัตินักศึกษา</h1>
     </header>
 
+    <!-- ลิงก์เชื่อมโยงไปยังหน้าต่างๆ -->
     <nav>
         <a href="index.html">หน้าแรก (Index)</a>
         <a href="person1.html" class="active">นักศึกษาคนที่ 1</a>
@@ -368,7 +175,6 @@
     <main class="container">
         <div class="profile-header">
             <div class="profile-img-wrapper">
-                <!-- วางไฟล์รูปภาพชื่อ profile.jpg ไว้ในโฟลเดอร์เดียวกัน -->
                 <img src="profile.jpg" alt="รูปถ่าย นายเมธัส แม่ปุน" class="profile-img">
             </div>
             <h2>นายเมธัส แม่ปุน (ยาซีน)</h2>
@@ -425,4 +231,3 @@
 
 </body>
 </html>
-```eof
